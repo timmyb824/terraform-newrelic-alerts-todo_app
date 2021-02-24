@@ -112,3 +112,10 @@ resource "newrelic_alert_channel" "slack_notification" {
     channel = "todo-app"
   }
 }
+
+resource "newrelic_alert_policy_channel" "ChannelSubs" {
+  policy_id  = newrelic_alert_policy.slack_notification.id
+  channel_ids = [
+    newrelic_alert_channel.slack_notification.id
+  ]
+}
