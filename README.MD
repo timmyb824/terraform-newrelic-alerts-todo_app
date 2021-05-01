@@ -31,5 +31,5 @@ terraform init
 ```
 
 ## Notes
-A .tfvars file and corresponding variables file will need to be created for this code to work. 
+A .tfvars file is needed for this code to work. 
 
